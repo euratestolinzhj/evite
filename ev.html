@@ -1,16 +1,18 @@
-addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
-
-async function handleRequest(request) {
-  const links = [
-    "https://pub-f06eb739a46e4d3eb76a539e4cdc5f3a.r2.dev/rsvp.html",
-    "https://pub-8ad1c49c7168447abb26151e23451310.r2.dev/rsvp.html",
-    "https://pub-fd57194b560349efb7425bb44439ef76.r2.dev/rsvp.html",
-    "https://pub-99477ee36ee94f379a2513c1825df8d0.r2.dev/rsvp.html",
-    "https://pub-f06eb739a46e4d3eb76a539e4cdc5f3a.r2.dev/rsvp.html"
-  ];
-
-  const randomUrl = links[Math.floor(Math.random() * links.length)];
-  return Response.redirect(randomUrl, 302);
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    const links = [
+      "https://hotmail.com",
+      "https://google.com"
+    ];
+    const randomUrl = links[Math.floor(Math.random() * links.length)];
+    window.location.href = randomUrl;
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
